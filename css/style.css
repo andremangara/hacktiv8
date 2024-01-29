@@ -1,0 +1,134 @@
+body {
+    background: blue;
+    color: white;
+}
+
+.box {
+    background: violet;
+    height: 200px;
+    width: 300px;
+    padding: 20px;
+}
+
+.box-dua {
+    background: red;
+    height: 100px;
+    width: 600px;
+    padding-left: 70px;
+}
+
+.tulisan-satu {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.tulisan-dua {
+    color: orangered;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: right;
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+
+.tulisan-tiga {
+    color: aqua;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    text-align: center;
+    text-transform: lowercase;
+    text-decoration: line-through;
+    word-spacing: 10px;
+}
+
+.link {
+    font-size: 20pt;
+}
+
+.link:hover {
+    color: red;
+}
+
+.link:link {
+    color: blue;
+}
+
+.link:active {
+    color: green;
+}
+
+.link:visited {
+    background: yellow;
+}
+
+.tulisan-kiri {
+    text-align: left;
+}
+
+.tulisan-kanan {
+    text-align: right;
+}
+
+.tulisan-tengah {
+    text-align: center;
+}
+
+.tulisan-justify {
+    text-align: justify;
+}
+
+.tulisan-absolute {
+    background: turquoise;
+    position: absolute;
+}
+
+.tulisan-relative {
+    background: brown;
+    position: relative;
+}
+
+.tulisan-static {
+    background: palegreen;
+    position: static;
+}
+
+.tulisan-fixed {
+    background: pink;
+    position: fixed;
+}
+
+#garis-1 {
+    border-style: solid;
+}
+
+#garis-2 {
+    border-style: dotted;
+}
+
+#garis-3 {
+    border-style: dashed;
+}
+
+#garis-4 {
+    border-style: double;
+}
+
+#garis-5 {
+    border-style: groove;
+}
+
+#garis-6 {
+    border-style: inset;
+}
+
+#garis-7 {
+    border-style: outset;
+}
+
+#garis-8 {
+    border-style: ridge;
+}
