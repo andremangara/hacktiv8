@@ -30,6 +30,15 @@
     <script>
         // function untuk show dan hide form
         function showHide() {
+            var x = document.getElementById("formProfile");
+            if (x.style.display == "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function isiform() {
             console.log(document.getElementById("namaForm").value);
             document.getElementById("nama").innerHTML = document.getElementById("namaForm").value;
             document.getElementById("role").innerHTML = document.getElementById("roleForm").value;
@@ -38,12 +47,7 @@
             document.getElementById("lokasi").innerHTML = document.getElementById("lokasiForm").value;
             document.getElementById("yoe").innerHTML = document.getElementById("yoeForm").value;
             document.getElementById("email").innerHTML = document.getElementById("emailForm").value;
-            var x = document.getElementById("formProfile");
-            if (x.style.display == "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+            showHide();
         }
     </script>
 </head>
@@ -184,7 +188,7 @@
                 </form>
                 <div style="padding-top: 20px;">
                     <button type="submit" class=" w-100 btn-success btn-lg btn-block"
-                        onclick="showHide()">Submit</button>
+                        onclick="isiform()">Submit</button>
                 </div>
             </div>
         </div>
