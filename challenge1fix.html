@@ -23,98 +23,65 @@
             color: #000;
         }
 
-        nav {
-            margin: auto;
-            text-align: center;
-            width: 100%;
-        }
-
-        nav ul ul {
+        #formProfile {
             display: none;
         }
-
-        nav ul li:hover>ul {
-            display: block;
-            width: 150px;
-        }
-
-        nav ul {
-            background: #eef4f1;
-            padding: 0 20px;
-            list-style: none;
-            position: relative;
-            display: inline-table;
-            width: 100%;
-        }
-
-        nav ul:after {
-            content: "";
-            clear: both;
-            display: block;
-        }
-
-        nav ul li {
-            float: right;
-        }
-
-        nav ul li:hover {
-            background: #666;
-        }
-
-        nav ul li:hover a {
-            color: #000000;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 25px;
-            color: #000000;
-            text-decoration: none;
-        }
-
-        nav ul ul {
-            background: #eef4f1;
-            border-radius: 0px;
-            padding: 0;
-            position: absolute;
-            top: 100%;
-        }
-
-        nav ul ul li {
-            float: none;
-            border-top: 1px solid #eef4f1;
-            border-bottom: 1px solid #eef4f1;
-            position: relative;
-        }
-
-        nav ul ul li a {
-            padding: 15px 40px;
-            color: #fff;
-        }
-
-        nav ul ul li a:hover {
-            background-color: #666;
-        }
-
-        nav ul ul ul {
-            position: absolute;
-            left: 100%;
-            top: 0;
-        }
     </style>
+    <script>
+        // function untuk show dan hide form
+        function showHide() {
+            console.log(document.getElementById("namaForm").value);
+            document.getElementById("nama").innerHTML = document.getElementById("namaForm").value;
+            document.getElementById("role").innerHTML = document.getElementById("roleForm").value;
+            document.getElementById("availability").innerHTML = document.getElementById("availabilityForm").value;
+            document.getElementById("usia").innerHTML = document.getElementById("ageForm").value;
+            document.getElementById("lokasi").innerHTML = document.getElementById("lokasiForm").value;
+            document.getElementById("yoe").innerHTML = document.getElementById("yoeForm").value;
+            document.getElementById("email").innerHTML = document.getElementById("emailForm").value;
+            var x = document.getElementById("formProfile");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">INVENTORY</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">GALLERY</a>
-            <li><a href="#">PRODUCT</a>
-            <li><a href="#">HOME</a></li>
-        </ul>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Profile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">INVENTORY</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <!-- Bagian Profile -->
     <main class="container border">
         <div class="row">
             <div class="col-md-2 py-5">
@@ -123,9 +90,9 @@
                 </div>
             </div>
             <div class="col-md-4 py-5">
-                <h2>Andre Mangara</h2><br>
-                Front End Engineer <br>
-                <button type="button" class="btn btn-primary">Kontak</button> <button type="button"
+                <h2 id="nama"></h2><br>
+                <div id="role"></div> <br>
+                <button type="button" class="btn btn-primary" onclick="showHide()">Edit</button> <button type="button"
                     class="btn btn-outline-secondary">Resume</button>
 
             </div>
@@ -137,7 +104,7 @@
                                 <h4 for="Availability">Availability</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5>Fulltime</h5>
+                                <h5 id="availability"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -145,15 +112,15 @@
                                 <h4 for="Usia">Usia</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5>28</h5>
+                                <h5 id="usia"></h5>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <h4 for="kota">Lokasi</h4>
+                                <h4 for="lokasi">Lokasi</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5> Jakarta, Indonesia</h5>
+                                <h5 id="lokasi"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -161,7 +128,7 @@
                                 <h4 for="YoE">Pengalaman</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5>4 Tahun</h5>
+                                <h5 id="yoe"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -169,7 +136,7 @@
                                 <h4 for="email">Email</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5>andremangaras@gmail.com</h5>
+                                <h5 id="email"></h5>
                             </td>
                         </tr>
                     </thead>
@@ -181,47 +148,47 @@
         </div>
     </main>
 
-    <div class="container">
+    <!-- Bagian Form -->
+    <div class="container" id="formProfile">
         <div class="row">
             <div class="col-12 py-5">
                 <form>
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" placeholder="Enter nama">
+                        <input type="text" class="form-control" id="namaForm" placeholder="Enter nama">
                     </div>
                     <div class="form-group">
                         <label for="role">Role</label>
-                        <input type="text" class="form-control" id="role" placeholder="Enter role">
+                        <input type="text" class="form-control" id="roleForm" placeholder="Enter role">
                     </div>
                     <div class="form-group">
                         <label for="availability">Availability</label>
-                        <input type="text" class="form-control" id="availability" placeholder="Enter availability">
+                        <input type="text" class="form-control" id="availabilityForm" placeholder="Enter availability">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
-                        <input type="text" class="form-control" id="age" placeholder="Enter age">
+                        <input type="text" class="form-control" id="ageForm" placeholder="Enter age">
                     </div>
                     <div class="form-group">
                         <label for="lokasi">Lokasi</label>
-                        <input type="text" class="form-control" id="lokasi" placeholder="Enter lokasi">
+                        <input type="text" class="form-control" id="lokasiForm" placeholder="Enter lokasi">
                     </div>
                     <div class="form-group">
                         <label for="yoe">Years Experience</label>
-                        <input type="text" class="form-control" id="yoe" placeholder="Enter years experience">
+                        <input type="text" class="form-control" id="yoeForm" placeholder="Enter years experience">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        <input type="email" class="form-control" id="emailForm" placeholder="Enter email">
                     </div>
                 </form>
                 <div style="padding-top: 20px;">
-                    <button type="submit" class=" w-100 btn-success btn-lg btn-block">Submit</button>
+                    <button type="submit" class=" w-100 btn-success btn-lg btn-block"
+                        onclick="showHide()">Submit</button>
                 </div>
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
