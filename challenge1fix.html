@@ -24,31 +24,31 @@
         }
 
         #formProfile {
-            display: none;
+            display: block;
         }
     </style>
     <script>
-        // function untuk show dan hide form
-        function showHide() {
-            var x = document.getElementById("formProfile");
-            if (x.style.display == "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-        // mengisi nilai dari form ke profile
-        function isiform() {
-            console.log(document.getElementById("namaForm").value);
-            document.getElementById("nama").innerHTML = document.getElementById("namaForm").value;
-            document.getElementById("role").innerHTML = document.getElementById("roleForm").value;
-            document.getElementById("availability").innerHTML = document.getElementById("availabilityForm").value;
-            document.getElementById("usia").innerHTML = document.getElementById("ageForm").value;
-            document.getElementById("lokasi").innerHTML = document.getElementById("lokasiForm").value;
-            document.getElementById("yoe").innerHTML = document.getElementById("yoeForm").value;
-            document.getElementById("email").innerHTML = document.getElementById("emailForm").value;
-            showHide();
-        }
+        // // function untuk show dan hide form
+        // function showHide() {
+        //     var x = document.getElementById("formProfile");
+        //     if (x.style.display == "block") {
+        //         x.style.display = "none";
+        //     } else {
+        //         x.style.display = "block";
+        //     }
+        // }
+        // // mengisi nilai dari form ke profile
+        // function isiform() {
+        //     console.log(document.getElementById("namaForm").value);
+        //     document.getElementById("nama").innerHTML = document.getElementById("namaForm").value;
+        //     document.getElementById("role").innerHTML = document.getElementById("roleForm").value;
+        //     document.getElementById("availability").innerHTML = document.getElementById("availabilityForm").value;
+        //     document.getElementById("usia").innerHTML = document.getElementById("ageForm").value;
+        //     document.getElementById("lokasi").innerHTML = document.getElementById("lokasiForm").value;
+        //     document.getElementById("yoe").innerHTML = document.getElementById("yoeForm").value;
+        //     document.getElementById("email").innerHTML = document.getElementById("emailForm").value;
+        //     showHide();
+        // }
     </script>
 </head>
 
@@ -94,8 +94,8 @@
                 </div>
             </div>
             <div class="col-md-4 py-5">
-                <h2 id="nama"></h2><br>
-                <div id="role"></div> <br>
+                <h2 id="nama">Andre Mangara</h2><br>
+                <div id="role">Front End Developer</div> <br>
                 <button type="button" class="btn btn-primary" onclick="showHide()">Edit</button> <button type="button"
                     class="btn btn-outline-secondary">Resume</button>
 
@@ -108,7 +108,7 @@
                                 <h4 for="Availability">Availability</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5 id="availability"></h5>
+                                <h5 id="availability">Fulltime</h5>
                             </td>
                         </tr>
                         <tr>
@@ -116,7 +116,7 @@
                                 <h4 for="Usia">Usia</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5 id="usia"></h5>
+                                <h5 id="usia">28</h5>
                             </td>
                         </tr>
                         <tr>
@@ -124,7 +124,7 @@
                                 <h4 for="lokasi">Lokasi</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5 id="lokasi"></h5>
+                                <h5 id="lokasi">Jakarta</h5>
                             </td>
                         </tr>
                         <tr>
@@ -132,7 +132,7 @@
                                 <h4 for="YoE">Pengalaman</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5 id="yoe"></h5>
+                                <h5 id="yoe">5 Tahun</h5>
                             </td>
                         </tr>
                         <tr>
@@ -140,7 +140,7 @@
                                 <h4 for="email">Email</h4>
                             </td>
                             <td style="padding-left: 20px;">
-                                <h5 id="email"></h5>
+                                <h5 id="email">andremangaras@gmail.com</h5>
                             </td>
                         </tr>
                     </thead>
