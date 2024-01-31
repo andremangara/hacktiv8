@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Score</h1>
+
+    <button onclick="myFunction()">Input score</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            let inputpassword = prompt("Please enter your score (1-100)", "");
+            if (inputpassword != null && inputpassword >= 80 && inputpassword <= 100) {
+                alert("Anjay bro, dapat A!");
+            } else if (inputpassword >= 60 && inputpassword < 80) {
+                alert("Skut bro, dapat B!");
+            } else if (inputpassword >= 40 && inputpassword < 60) {
+                alert("Semangat bro, dapat C!");
+            } else if (inputpassword < 40) {
+                alert("Pukpuk bro, dapat D!");
+            } else {
+                alert("Cannot Calculate your score");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <script src="cekPalindrome.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <label for="validasi">Kalimat:</label>
+        <input type="text" id="kata" name="kata"> <br>
+        <label for="validasi">Validasi Tanda Baca:</label>
+        <select name="validasi" id="validasi">
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+        </select>
+    </form>
+    <input type="submit" onclick="cekPalindrome(document.getElementById('validasi').value)" id="submit">
+</body>
+
+</html>

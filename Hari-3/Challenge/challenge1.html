@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Password</h1>
+
+    <button onclick="myFunction()">Input Password</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            const password = "andre123";
+            let inputpassword = prompt("Please enter your password", "andre123");
+            if (inputpassword != null) {
+                if (inputpassword == password) {
+                    document.getElementById("demo").innerHTML =
+                        "Password Benar";
+                } else {
+                    window.location.href = "https://id.linkedin.com/in/nurul-hasanah-siregar-b53677204";
+                }
+            } else {
+                document.getElementById("demo").innerHTML =
+                    "Password Kosong";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
