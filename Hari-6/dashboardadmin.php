@@ -37,6 +37,29 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Tugas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.php">Blog</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="dashboardadmin.php">Admin</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                Tugas website blog
+            </span>
+        </div>
+    </nav>
     <!-- Tabel Postingan -->
     <div class="container">
         <h1>Dashboard Admin</h1>
@@ -69,12 +92,9 @@
                                 <select class="form-select form-select-sm" aria-label="Small select example"
                                     name="kategori">
                                     <?php
-                                    // use a while loop to fetch data 
-                                    // from the $all_categories variable 
-                                    // and individually display as an option
                                     while (
                                         $category = mysqli_fetch_array(
-                                            $result4,
+                                            $result2,
                                             MYSQLI_ASSOC
                                         )
                                     ):
@@ -185,23 +205,16 @@
                                                 name="kategori">
                                                 <option value="">Select Kategori</option>
                                                 <?php
-                                                // use a while loop to fetch data 
-                                                // from the $all_categories variable 
-                                                // and individually display as an option
-                                                while (
-                                                    $category2 = mysqli_fetch_array(
-                                                        $result5,
-                                                        MYSQLI_ASSOC
-                                                    )
-                                                ):
-                                                    ;
-                                                    ?>
-                                                    <option value="<?php echo $category2["id_kategori"]; ?>">
-                                                        <?php echo $category2["kategori"]; ?>
-                                                    </option>
-                                                    <?php
-                                                endwhile;
-                                                // While loop must be terminated
+                                                $conn = mysqli_connect("localhost", "root", "", "portofolio");
+                                                $sql2 = "SELECT * FROM kategori";
+                                                $result4 = $conn->query($sql2);
+                                                // Tampilkan data kategori sebagai opsi
+                                                while ($rowkategori = $result4->fetch_assoc()) {
+                                                    $selected = ($rowkategori['id_kategori'] == $row['kategori']) ? 'selected' : '';
+                                                    echo '<option value="' . $rowkategori['id_kategori'] . '" ' . $selected . '>' . $rowkategori['kategori'] . '</option>';
+                                                }
+
+                                                // $conn->close();
                                                 ?>
                                             </select>
                                         </div>
@@ -309,9 +322,9 @@
             </thead>
             <?php
             $i = 1;
-            if ($result2->num_rows > 0) {
+            if ($result5->num_rows > 0) {
                 // output data of each row
-                while ($row = $result2->fetch_assoc()) {
+                while ($row = $result5->fetch_assoc()) {
                     ?>
                     <tbody>
                         <tr>
